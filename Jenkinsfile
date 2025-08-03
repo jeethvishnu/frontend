@@ -55,16 +55,16 @@ pipeline {
             }
         }
 
-        // stage('downstream job deploy') {
-        //     steps {
-        //         script {
-        //             def params = [
-        //                 string(name: 'appversion', value: "${appVersion}")
-        //             ]
-        //             build job: 'frontend-deploy', parameters: params, wait: false
-        //         }
-        //     }
-        // }
+        stage('downstream job deploy') {
+            steps {
+                script {
+                    def params = [
+                        string(name: 'appversion', value: "${appVersion}")
+                    ]
+                    build job: 'frontend-deploy', parameters: params, wait: false
+                }
+            }
+        }
     }
 
     post {
