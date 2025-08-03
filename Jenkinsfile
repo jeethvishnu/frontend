@@ -42,10 +42,10 @@ pipeline {
                         nexusUrl: "${nexusurl}",
                         groupId: 'com.expense',
                         version: "${appVersion}",
-                        repository: "frontend-j",
+                        repository: "frontend",
                         credentialsId: 'nexus',
                         artifacts: [[
-                            artifactId: "frontend-j",
+                            artifactId: "frontend",
                             classifier: '',
                             file: "frontend-${appVersion}.zip",
                             type: 'zip'
